@@ -3,47 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://2019-II-B-B30.github.io/index.html</loc>
+    <loc>https://kc2019B30.github.io/en/index.html</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://2019-II-B-B30.github.io/zh/index.html"
+                href="https://kc2019B30.github.io/zh/index.html"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://2019-II-B-B30.github.io/index.html"
+                href="https://kc2019B30.github.io/en/index.html"
                 />
   </url>
   
   <url>
-    <loc>https://2019-II-B-B30.github.io/tags/</loc>
+    <loc>https://kc2019B30.github.io/en/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://2019-II-B-B30.github.io/zh/tags/"
+                href="https://kc2019B30.github.io/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://2019-II-B-B30.github.io/tags/"
+                href="https://kc2019B30.github.io/en/tags/"
                 />
   </url>
   
   <url>
-    <loc>https://2019-II-B-B30.github.io/</loc>
+    <loc>https://kc2019B30.github.io/en/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://2019-II-B-B30.github.io/zh/"
+                href="https://kc2019B30.github.io/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://2019-II-B-B30.github.io/"
+                href="https://kc2019B30.github.io/en/"
                 />
   </url>
   
