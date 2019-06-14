@@ -3,72 +3,72 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>./zh/index.html</loc>
+    <loc>https://2019-II-B-B30.github.io/zh/index.html</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="./index.html"
+                href="https://2019-II-B-B30.github.io/index.html"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="./zh/index.html"
+                href="https://2019-II-B-B30.github.io/zh/index.html"
                 />
   </url>
   
   <url>
-    <loc>./zh/hardware_zh/</loc>
+    <loc>https://2019-II-B-B30.github.io/zh/hardware_zh/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>./zh/member_zh/</loc>
+    <loc>https://2019-II-B-B30.github.io/zh/member_zh/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>./zh/project_zh/</loc>
+    <loc>https://2019-II-B-B30.github.io/zh/project_zh/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>./zh/software_zh/</loc>
+    <loc>https://2019-II-B-B30.github.io/zh/software_zh/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>./zh/summary_zh/</loc>
+    <loc>https://2019-II-B-B30.github.io/zh/summary_zh/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>./zh/tags/</loc>
+    <loc>https://2019-II-B-B30.github.io/zh/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="./tags/"
+                href="https://2019-II-B-B30.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="./zh/tags/"
+                href="https://2019-II-B-B30.github.io/zh/tags/"
                 />
   </url>
   
   <url>
-    <loc>./zh/</loc>
+    <loc>https://2019-II-B-B30.github.io/zh/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="./"
+                href="https://2019-II-B-B30.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="./zh/"
+                href="https://2019-II-B-B30.github.io/zh/"
                 />
   </url>
   

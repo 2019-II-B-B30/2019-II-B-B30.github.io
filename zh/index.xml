@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>欢迎来到我们的智能小车</title>
-    <link>./zh/</link>
+    <link>https://2019-II-B-B30.github.io/zh/</link>
     <description>Recent content on 欢迎来到我们的智能小车</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	<atom:link href="./zh/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://2019-II-B-B30.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>./zh/hardware_zh/</link>
+      <link>https://2019-II-B-B30.github.io/zh/hardware_zh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>./zh/hardware_zh/</guid>
+      <guid>https://2019-II-B-B30.github.io/zh/hardware_zh/</guid>
       <description>硬件介绍 主要元件 主要电路图 主要原理 代码实现 #include &amp;lt;string.h&amp;gt;/* Define used pin */ int pin3 = 3; int pin4 = 6; int pin9 = 9; int pin10 = 4; /* str stores message from PC */ char str[7]; void setup() { /* Begin the serial */ Serial.begin(9600); /* Enable output pin */ pinMode(pin3, OUTPUT); pinMode(pin4, OUTPUT); pinMode(pin9, OUTPUT); pinMode(pin10, OUTPUT); /* Write analog signal */ analogWrite(pin3,255); analogWrite(pin4,255); analogWrite(pin9,255); analogWrite(pin10,255); } /* Convert from char to num */ int char_to_num(char c) { return c - &amp;#39;0&amp;#39;; } /* Main loop */ void loop() { /* Make sure the serial is abailable */ if(Serial.</description>
     </item>
     
     <item>
       <title></title>
-      <link>./zh/member_zh/</link>
+      <link>https://2019-II-B-B30.github.io/zh/member_zh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>./zh/member_zh/</guid>
+      <guid>https://2019-II-B-B30.github.io/zh/member_zh/</guid>
       <description>成员介绍 冯伟琪 [照片占坑]
 [一段文字描述]
 黄弘 [照片占坑]
@@ -37,28 +37,28 @@
     
     <item>
       <title></title>
-      <link>./zh/project_zh/</link>
+      <link>https://2019-II-B-B30.github.io/zh/project_zh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>./zh/project_zh/</guid>
+      <guid>https://2019-II-B-B30.github.io/zh/project_zh/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>./zh/software_zh/</link>
+      <link>https://2019-II-B-B30.github.io/zh/software_zh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>./zh/software_zh/</guid>
+      <guid>https://2019-II-B-B30.github.io/zh/software_zh/</guid>
       <description> 软件介绍 </description>
     </item>
     
     <item>
       <title></title>
-      <link>./zh/summary_zh/</link>
+      <link>https://2019-II-B-B30.github.io/zh/summary_zh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>./zh/summary_zh/</guid>
+      <guid>https://2019-II-B-B30.github.io/zh/summary_zh/</guid>
       <description> 项目总结 成果 不足 自我评价 </description>
     </item>
     

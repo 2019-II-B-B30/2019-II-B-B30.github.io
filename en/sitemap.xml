@@ -3,47 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>./index.html</loc>
+    <loc>https://2019-II-B-B30.github.io/index.html</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="./zh/index.html"
+                href="https://2019-II-B-B30.github.io/zh/index.html"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="./index.html"
+                href="https://2019-II-B-B30.github.io/index.html"
                 />
   </url>
   
   <url>
-    <loc>./tags/</loc>
+    <loc>https://2019-II-B-B30.github.io/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="./zh/tags/"
+                href="https://2019-II-B-B30.github.io/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="./tags/"
+                href="https://2019-II-B-B30.github.io/tags/"
                 />
   </url>
   
   <url>
-    <loc>./</loc>
+    <loc>https://2019-II-B-B30.github.io/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="./zh/"
+                href="https://2019-II-B-B30.github.io/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="./"
+                href="https://2019-II-B-B30.github.io/"
                 />
   </url>
   
