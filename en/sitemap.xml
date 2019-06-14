@@ -3,47 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://vic0428.github.io/en/index.html</loc>
+    <loc>/en/index.html</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://vic0428.github.io/zh/index.html"
+                href="/zh/index.html"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://vic0428.github.io/en/index.html"
+                href="/en/index.html"
                 />
   </url>
   
   <url>
-    <loc>http://vic0428.github.io/en/tags/</loc>
+    <loc>/en/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://vic0428.github.io/zh/tags/"
+                href="/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://vic0428.github.io/en/tags/"
+                href="/en/tags/"
                 />
   </url>
   
   <url>
-    <loc>http://vic0428.github.io/en/</loc>
+    <loc>/en/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="http://vic0428.github.io/zh/"
+                href="/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://vic0428.github.io/en/"
+                href="/en/"
                 />
   </url>
   
