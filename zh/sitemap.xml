@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://vic0428.github.io/zh/index.html</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://vic0428.github.io/en/index.html"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://vic0428.github.io/zh/index.html"
+                />
+  </url>
+  
+  <url>
+    <loc>http://vic0428.github.io/zh/hardware_zh/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vic0428.github.io/zh/member_zh/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vic0428.github.io/zh/project_zh/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vic0428.github.io/zh/software_zh/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vic0428.github.io/zh/summary_zh/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vic0428.github.io/zh/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://vic0428.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://vic0428.github.io/zh/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://vic0428.github.io/zh/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://vic0428.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="http://vic0428.github.io/zh/"
+                />
+  </url>
+  
+</urlset>

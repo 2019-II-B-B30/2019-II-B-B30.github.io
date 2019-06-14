@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="Weiqi Feng ">
+<meta name="description"
+    content="硬件介绍 主要元件 主要电路图 主要原理 代码实现 #include &amp;lt;string.h&amp;gt;/* Define used pin */ int pin3 = 3; int pin4 = 6; int pin9 = 9; int pin10 = 4; /* str stores message from PC */ char str[7]; void setup() { /* Begin the serial */ Serial.begin(9600); /* Enable output pin */ pinMode(pin3, OUTPUT); pinMode(pin4, OUTPUT); pinMode(pin9, OUTPUT); pinMode(pin10, OUTPUT); /* Write analog signal */ analogWrite(pin3,255); analogWrite(pin4,255); analogWrite(pin9,255); analogWrite(pin10,255); } /* Convert from char to num */ int char_to_num(char c) { return c - &amp;#39;0&amp;#39;; } /* Main loop */ void loop() { /* Make sure the serial is abailable */ if(Serial." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="http://vic0428.github.io/zh/hardware_zh/" />
+
+
+<title>
+    
+     :: 欢迎来到我们的智能小车 
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="http://vic0428.github.io/main.min.91687bbfc139d7ff1a244bb6d7324425f9c4f424eaaad242b478e3b3cf56396a.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://vic0428.github.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://vic0428.github.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://vic0428.github.io/favicon-16x16.png">
+<link rel="manifest" href="http://vic0428.github.io/site.webmanifest">
+<link rel="mask-icon" href="http://vic0428.github.io/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="http://vic0428.github.io/favicon.ico">
+<meta name="theme-color" content="#252627">
+<meta itemprop="name" content="">
+<meta itemprop="description" content="硬件介绍 主要元件 主要电路图 主要原理 代码实现 #include &lt;string.h&gt;/* Define used pin */ int pin3 = 3; int pin4 = 6; int pin9 = 9; int pin10 = 4; /* str stores message from PC */ char str[7]; void setup() { /* Begin the serial */ Serial.begin(9600); /* Enable output pin */ pinMode(pin3, OUTPUT); pinMode(pin4, OUTPUT); pinMode(pin9, OUTPUT); pinMode(pin10, OUTPUT); /* Write analog signal */ analogWrite(pin3,255); analogWrite(pin4,255); analogWrite(pin9,255); analogWrite(pin10,255); } /* Convert from char to num */ int char_to_num(char c) { return c - &#39;0&#39;; } /* Main loop */ void loop() { /* Make sure the serial is abailable */ if(Serial.">
+
+
+
+<meta itemprop="wordCount" content="175">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://vic0428.github.io/"/>
+
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="硬件介绍 主要元件 主要电路图 主要原理 代码实现 #include &lt;string.h&gt;/* Define used pin */ int pin3 = 3; int pin4 = 6; int pin9 = 9; int pin10 = 4; /* str stores message from PC */ char str[7]; void setup() { /* Begin the serial */ Serial.begin(9600); /* Enable output pin */ pinMode(pin3, OUTPUT); pinMode(pin4, OUTPUT); pinMode(pin9, OUTPUT); pinMode(pin10, OUTPUT); /* Write analog signal */ analogWrite(pin3,255); analogWrite(pin4,255); analogWrite(pin9,255); analogWrite(pin10,255); } /* Convert from char to num */ int char_to_num(char c) { return c - &#39;0&#39;; } /* Main loop */ void loop() { /* Make sure the serial is abailable */ if(Serial."/>
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="http://vic0428.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="http://vic0428.github.io/zh/project_zh/"></a></li><li><a href="http://vic0428.github.io/zh/member_zh/">成员介绍</a></li><li><a href="http://vic0428.github.io/zh/hardware_zh/">硬件介绍</a></li><li><a href="http://vic0428.github.io/zh/software_zh/">软件介绍</a></li><li><a href="http://vic0428.github.io/zh/summary_zh/">项目总结</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="http://vic0428.github.io/zh/hardware_zh/"></a></h2>
+
+            
+
+            <div class="post-content">
+                
+
+<h1 id="硬件介绍">硬件介绍</h1>
+
+<h2 id="主要元件">主要元件</h2>
+
+<h2 id="主要电路图">主要电路图</h2>
+
+<h2 id="主要原理">主要原理</h2>
+
+<h2 id="代码实现">代码实现</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#75715e">/* Define used pin */</span>
+<span style="color:#66d9ef">int</span> pin3 <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+<span style="color:#66d9ef">int</span> pin4  <span style="color:#f92672">=</span> <span style="color:#ae81ff">6</span>;
+<span style="color:#66d9ef">int</span> pin9 <span style="color:#f92672">=</span> <span style="color:#ae81ff">9</span>;
+<span style="color:#66d9ef">int</span> pin10 <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
+<span style="color:#75715e">/* str stores message from PC */</span>
+<span style="color:#66d9ef">char</span> str[<span style="color:#ae81ff">7</span>];
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#75715e">/* Begin the serial */</span>
+  Serial.begin(<span style="color:#ae81ff">9600</span>);
+  <span style="color:#75715e">/* Enable output pin */</span>
+  pinMode(pin3, OUTPUT);
+  pinMode(pin4, OUTPUT);
+  pinMode(pin9, OUTPUT);
+  pinMode(pin10, OUTPUT);
+  <span style="color:#75715e">/* Write analog signal */</span>
+  analogWrite(pin3,<span style="color:#ae81ff">255</span>);
+  analogWrite(pin4,<span style="color:#ae81ff">255</span>);
+  analogWrite(pin9,<span style="color:#ae81ff">255</span>);
+  analogWrite(pin10,<span style="color:#ae81ff">255</span>);
+}
+<span style="color:#75715e">/* Convert from char to num */</span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">char_to_num</span>(<span style="color:#66d9ef">char</span> c)
+{
+  <span style="color:#66d9ef">return</span> c <span style="color:#f92672">-</span> <span style="color:#e6db74">&#39;0&#39;</span>;
+}
+<span style="color:#75715e">/* Main loop */</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  <span style="color:#75715e">/* Make sure the serial is abailable */</span>
+  <span style="color:#66d9ef">if</span>(Serial.available()<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>)
+  {
+    <span style="color:#75715e">/* Read bytes from serial */</span>
+    Serial.readBytes(str, <span style="color:#ae81ff">6</span>); 
+    <span style="color:#75715e">/* Get left speed */</span>
+    <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> char_to_num(str[<span style="color:#ae81ff">0</span>]) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> char_to_num(str[<span style="color:#ae81ff">1</span>]) <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> char_to_num(str[<span style="color:#ae81ff">2</span>]);
+    <span style="color:#75715e">/* Get right speed */</span>
+    <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> char_to_num(str[<span style="color:#ae81ff">3</span>]) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> char_to_num(str[<span style="color:#ae81ff">4</span>]) <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">+</span> char_to_num(str[<span style="color:#ae81ff">5</span>]);
+    <span style="color:#75715e">/* Run the motor at specific speed */</span>
+    motorRun(left, right );
+  }  
+  
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">motorRun</span>(<span style="color:#66d9ef">int</span> left,<span style="color:#66d9ef">int</span> right)
+{
+  <span style="color:#75715e">/* Write analog signal to control the motor */</span>
+  analogWrite(pin3,left);
+  analogWrite(pin4,left);
+  analogWrite(pin9,right);
+  analogWrite(pin10,right);
+}</code></pre></div>
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  			</div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+                <span>Created by <a href="https://vic0428.github.io">Weiqi Feng</a></span>
+            
+
+            
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="http://vic0428.github.io/bundle.min.cf7871ed49474a80ed457154d24e61f7881adbe0f9384951a74ac46b688a39a4dbfa68bc6d37baeb058186de354ead3487d4ee7f083ea4cba860c48600b694f3.js" integrity="sha512-z3hx7UlHSoDtRXFU0k5h94ga2&#43;D5OElRp0rEa2iKOaTb&#43;mi8bTe66wWBht41Tq00h9Tufwg&#43;pMuoYMSGALaU8w=="></script>
+
+
+
+    </body>
+</html>
