@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://2019-II-B-B30.github.io/en/index.html</loc>
+    <loc>https://2019-II-B-B30.github.io/index.html</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -13,12 +13,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://2019-II-B-B30.github.io/en/index.html"
+                href="https://2019-II-B-B30.github.io/index.html"
                 />
   </url>
   
   <url>
-    <loc>https://2019-II-B-B30.github.io/en/tags/</loc>
+    <loc>https://2019-II-B-B30.github.io/tags/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -28,12 +28,12 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://2019-II-B-B30.github.io/en/tags/"
+                href="https://2019-II-B-B30.github.io/tags/"
                 />
   </url>
   
   <url>
-    <loc>https://2019-II-B-B30.github.io/en/</loc>
+    <loc>https://2019-II-B-B30.github.io/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -43,7 +43,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://2019-II-B-B30.github.io/en/"
+                href="https://2019-II-B-B30.github.io/"
                 />
   </url>
   
