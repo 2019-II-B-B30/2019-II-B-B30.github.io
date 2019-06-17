@@ -7,7 +7,17 @@
 <meta name="author"
     content="Weiqi Feng ">
 <meta name="description"
-    content="硬件介绍 主要元件 主要电路图 主要原理 代码实现 #include &amp;lt;string.h&amp;gt;/* Define used pin */ int pin3 = 3; int pin4 = 6; int pin9 = 9; int pin10 = 4; /* str stores message from PC */ char str[7]; void setup() { /* Begin the serial */ Serial.begin(9600); /* Enable output pin */ pinMode(pin3, OUTPUT); pinMode(pin4, OUTPUT); pinMode(pin9, OUTPUT); pinMode(pin10, OUTPUT); /* Write analog signal */ analogWrite(pin3,255); analogWrite(pin4,255); analogWrite(pin9,255); analogWrite(pin10,255); } /* Convert from char to num */ int char_to_num(char c) { return c - &amp;#39;0&amp;#39;; } /* Main loop */ void loop() { /* Make sure the serial is abailable */ if(Serial." />
+    content="硬件介绍 主要元件 Arduino Uno Arduino Uno 是一款基于ATmega328P的微控制器板。它有14个数字输入/输出引脚(其中6个可用作PWM输出)，6个模拟输入，16MHz晶振时钟，USB连接，电源插孔，ICSP接头和复位按钮。只需要通过USB数据线连接电脑就能供电、程序下载和数据通讯。
+在本次试验中, Arduino Uno开发板作为小车的核心控制部分, 是整个小车的中枢,承担着接收指令,处理指令,发送指令的核心作用.
+HC06 HC-05和HC-06是现在使用较多的两种蓝牙模块。HC-05蓝牙模块既能作为主机使用也能作为从机使用,而HC-06蓝牙模块只能作为从机使用,我们小组考虑蓝牙只需要作为从机进行使用,故使用HC-06模块.
+蓝牙模块在小车中负责与PC端进行无线通讯,负责接收PC端传出的控制指令并传输到Arduino 单片机上,其供电是通过单片机的引脚进行供电
+HG7881CP HG7881CP 是一个二路驱动模块, 分别驱动小车的左右两轮,能够实现正反转,其有6个引脚.分别和四根信号线与一根电源线一根地线相连.
+在本次试验中由于小车不需要倒退,并且为了方便调试,只选用了两根信号线,空置了两根信号线.并且为了电流过大造成单片机宕机,电源线和地线直接连接电池.
+直流减速电机 直流减速电机，是在普通直流电机的基础上，加上配套齿轮减速箱。齿轮减速箱的作用是，提供较低的转速，较大的力矩。同时，齿轮箱不同的减速比可以提供不同的转速和力矩。
+在本次试验中,为了追求小车的稳定性,使用的是直流减速电机而不是普通的直流电机.
+电机没有使用编码器,只把AB相与驱动模块相连接.
+主要电路图 主要原理 我们利用一块HC06连接在arduino板子的RX，TX口上作为蓝牙信号传输的端口，HC06与电脑适配传输信息，在arduino板子上编写程序利用Serial库接受蓝牙串口信号。在此arduino中我们定义了pin脚4,9输出控制信号，利用HG7881CP 和外接电源来控制电机，其中HG7881CP 的从左到右2口控制左边的直流电机，4口控制右边的直流电机。如此通过电脑蓝牙连接HC06传输指令控制arduino和电机。
+代码实现 #include &amp;lt;string.h&amp;gt;/* Define used pin */ int pin3 = 3; int pin4 = 6; int pin9 = 9; int pin10 = 4; /* str stores message from PC */ char str[7]; void setup() { /* Begin the serial */ Serial." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://kc2019B30.github.io/zh/hardware_zh/" />
@@ -38,11 +48,21 @@
 <link rel="shortcut icon" href="https://kc2019B30.github.io/favicon.ico">
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="">
-<meta itemprop="description" content="硬件介绍 主要元件 主要电路图 主要原理 代码实现 #include &lt;string.h&gt;/* Define used pin */ int pin3 = 3; int pin4 = 6; int pin9 = 9; int pin10 = 4; /* str stores message from PC */ char str[7]; void setup() { /* Begin the serial */ Serial.begin(9600); /* Enable output pin */ pinMode(pin3, OUTPUT); pinMode(pin4, OUTPUT); pinMode(pin9, OUTPUT); pinMode(pin10, OUTPUT); /* Write analog signal */ analogWrite(pin3,255); analogWrite(pin4,255); analogWrite(pin9,255); analogWrite(pin10,255); } /* Convert from char to num */ int char_to_num(char c) { return c - &#39;0&#39;; } /* Main loop */ void loop() { /* Make sure the serial is abailable */ if(Serial.">
+<meta itemprop="description" content="硬件介绍 主要元件 Arduino Uno Arduino Uno 是一款基于ATmega328P的微控制器板。它有14个数字输入/输出引脚(其中6个可用作PWM输出)，6个模拟输入，16MHz晶振时钟，USB连接，电源插孔，ICSP接头和复位按钮。只需要通过USB数据线连接电脑就能供电、程序下载和数据通讯。
+在本次试验中, Arduino Uno开发板作为小车的核心控制部分, 是整个小车的中枢,承担着接收指令,处理指令,发送指令的核心作用.
+HC06 HC-05和HC-06是现在使用较多的两种蓝牙模块。HC-05蓝牙模块既能作为主机使用也能作为从机使用,而HC-06蓝牙模块只能作为从机使用,我们小组考虑蓝牙只需要作为从机进行使用,故使用HC-06模块.
+蓝牙模块在小车中负责与PC端进行无线通讯,负责接收PC端传出的控制指令并传输到Arduino 单片机上,其供电是通过单片机的引脚进行供电
+HG7881CP HG7881CP 是一个二路驱动模块, 分别驱动小车的左右两轮,能够实现正反转,其有6个引脚.分别和四根信号线与一根电源线一根地线相连.
+在本次试验中由于小车不需要倒退,并且为了方便调试,只选用了两根信号线,空置了两根信号线.并且为了电流过大造成单片机宕机,电源线和地线直接连接电池.
+直流减速电机 直流减速电机，是在普通直流电机的基础上，加上配套齿轮减速箱。齿轮减速箱的作用是，提供较低的转速，较大的力矩。同时，齿轮箱不同的减速比可以提供不同的转速和力矩。
+在本次试验中,为了追求小车的稳定性,使用的是直流减速电机而不是普通的直流电机.
+电机没有使用编码器,只把AB相与驱动模块相连接.
+主要电路图 主要原理 我们利用一块HC06连接在arduino板子的RX，TX口上作为蓝牙信号传输的端口，HC06与电脑适配传输信息，在arduino板子上编写程序利用Serial库接受蓝牙串口信号。在此arduino中我们定义了pin脚4,9输出控制信号，利用HG7881CP 和外接电源来控制电机，其中HG7881CP 的从左到右2口控制左边的直流电机，4口控制右边的直流电机。如此通过电脑蓝牙连接HC06传输指令控制arduino和电机。
+代码实现 #include &lt;string.h&gt;/* Define used pin */ int pin3 = 3; int pin4 = 6; int pin9 = 9; int pin10 = 4; /* str stores message from PC */ char str[7]; void setup() { /* Begin the serial */ Serial.">
 
 
 
-<meta itemprop="wordCount" content="175">
+<meta itemprop="wordCount" content="200">
 
 
 
@@ -51,7 +71,17 @@
 <meta name="twitter:image" content="https://kc2019B30.github.io"/>
 
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="硬件介绍 主要元件 主要电路图 主要原理 代码实现 #include &lt;string.h&gt;/* Define used pin */ int pin3 = 3; int pin4 = 6; int pin9 = 9; int pin10 = 4; /* str stores message from PC */ char str[7]; void setup() { /* Begin the serial */ Serial.begin(9600); /* Enable output pin */ pinMode(pin3, OUTPUT); pinMode(pin4, OUTPUT); pinMode(pin9, OUTPUT); pinMode(pin10, OUTPUT); /* Write analog signal */ analogWrite(pin3,255); analogWrite(pin4,255); analogWrite(pin9,255); analogWrite(pin10,255); } /* Convert from char to num */ int char_to_num(char c) { return c - &#39;0&#39;; } /* Main loop */ void loop() { /* Make sure the serial is abailable */ if(Serial."/>
+<meta name="twitter:description" content="硬件介绍 主要元件 Arduino Uno Arduino Uno 是一款基于ATmega328P的微控制器板。它有14个数字输入/输出引脚(其中6个可用作PWM输出)，6个模拟输入，16MHz晶振时钟，USB连接，电源插孔，ICSP接头和复位按钮。只需要通过USB数据线连接电脑就能供电、程序下载和数据通讯。
+在本次试验中, Arduino Uno开发板作为小车的核心控制部分, 是整个小车的中枢,承担着接收指令,处理指令,发送指令的核心作用.
+HC06 HC-05和HC-06是现在使用较多的两种蓝牙模块。HC-05蓝牙模块既能作为主机使用也能作为从机使用,而HC-06蓝牙模块只能作为从机使用,我们小组考虑蓝牙只需要作为从机进行使用,故使用HC-06模块.
+蓝牙模块在小车中负责与PC端进行无线通讯,负责接收PC端传出的控制指令并传输到Arduino 单片机上,其供电是通过单片机的引脚进行供电
+HG7881CP HG7881CP 是一个二路驱动模块, 分别驱动小车的左右两轮,能够实现正反转,其有6个引脚.分别和四根信号线与一根电源线一根地线相连.
+在本次试验中由于小车不需要倒退,并且为了方便调试,只选用了两根信号线,空置了两根信号线.并且为了电流过大造成单片机宕机,电源线和地线直接连接电池.
+直流减速电机 直流减速电机，是在普通直流电机的基础上，加上配套齿轮减速箱。齿轮减速箱的作用是，提供较低的转速，较大的力矩。同时，齿轮箱不同的减速比可以提供不同的转速和力矩。
+在本次试验中,为了追求小车的稳定性,使用的是直流减速电机而不是普通的直流电机.
+电机没有使用编码器,只把AB相与驱动模块相连接.
+主要电路图 主要原理 我们利用一块HC06连接在arduino板子的RX，TX口上作为蓝牙信号传输的端口，HC06与电脑适配传输信息，在arduino板子上编写程序利用Serial库接受蓝牙串口信号。在此arduino中我们定义了pin脚4,9输出控制信号，利用HG7881CP 和外接电源来控制电机，其中HG7881CP 的从左到右2口控制左边的直流电机，4口控制右边的直流电机。如此通过电脑蓝牙连接HC06传输指令控制arduino和电机。
+代码实现 #include &lt;string.h&gt;/* Define used pin */ int pin3 = 3; int pin4 = 6; int pin9 = 9; int pin10 = 4; /* str stores message from PC */ char str[7]; void setup() { /* Begin the serial */ Serial."/>
 
 
 
@@ -127,9 +157,47 @@
 
 <h2 id="主要元件">主要元件</h2>
 
+<h3 id="arduino-uno">Arduino Uno</h3>
+
+<p><img src="https://kc2019B30.github.io/zh/hardware_zh.assets/image-20190617083429800.png" alt="image-20190617083429800" /></p>
+
+<p>Arduino Uno 是一款基于ATmega328P的微控制器板。它有14个数字输入/输出引脚(其中6个可用作PWM输出)，6个模拟输入，16MHz晶振时钟，USB连接，电源插孔，ICSP接头和复位按钮。只需要通过USB数据线连接电脑就能供电、程序下载和数据通讯。</p>
+
+<p>在本次试验中, Arduino Uno开发板作为小车的核心控制部分, 是整个小车的中枢,承担着接收指令,处理指令,发送指令的核心作用.</p>
+
+<h3 id="hc06">HC06</h3>
+
+<p><img src="https://kc2019B30.github.io/zh/hardware_zh.assets/image-20190617083522611.png" alt="image-20190617083522611" /></p>
+
+<p><strong>HC-05</strong>和<strong>HC-06</strong>是现在使用较多的两种蓝牙模块。<strong>HC-05</strong>蓝牙模块既能作为主机使用也能作为从机使用,而<strong>HC-06</strong>蓝牙模块只能作为从机使用,我们小组考虑蓝牙只需要作为从机进行使用,故使用<strong>HC-06</strong>模块.</p>
+
+<p>蓝牙模块在小车中负责与PC端进行无线通讯,负责接收PC端传出的控制指令并传输到Arduino 单片机上,其供电是通过单片机的引脚进行供电</p>
+
+<h3 id="hg7881cp">HG7881CP</h3>
+
+<p><img src="https://kc2019B30.github.io/zh/hardware_zh.assets/image-20190617083611337.png" alt="image-20190617083611337" /></p>
+
+<p>HG7881CP 是一个二路驱动模块, 分别驱动小车的左右两轮,能够实现正反转,其有6个引脚.分别和四根信号线与一根电源线一根地线相连.</p>
+
+<p>在本次试验中由于小车不需要倒退,并且为了方便调试,只选用了两根信号线,空置了两根信号线.并且为了电流过大造成单片机宕机,电源线和地线直接连接电池.</p>
+
+<h3 id="直流减速电机">直流减速电机</h3>
+
+<p><img src="https://kc2019B30.github.io/zh/hardware_zh.assets/image-20190617083625838.png" alt="image-20190617083625838" /></p>
+
+<p>直流减速电机，是在普通直流电机的基础上，加上配套齿轮减速箱。齿轮减速箱的作用是，提供较低的转速，较大的力矩。同时，齿轮箱不同的减速比可以提供不同的转速和力矩。</p>
+
+<p>在本次试验中,为了追求小车的稳定性,使用的是直流减速电机而不是普通的直流电机.</p>
+
+<p>电机没有使用编码器,只把AB相与驱动模块相连接.</p>
+
 <h2 id="主要电路图">主要电路图</h2>
 
+<p><img src="hardware_zh.assets/image-20190617083721627.png" alt="image-20190617083721627" /></p>
+
 <h2 id="主要原理">主要原理</h2>
+
+<p>我们利用一块HC06连接在arduino板子的RX，TX口上作为蓝牙信号传输的端口，HC06与电脑适配传输信息，在arduino板子上编写程序利用Serial库接受蓝牙串口信号。在此arduino中我们定义了pin脚4,9输出控制信号，利用HG7881CP 和外接电源来控制电机，其中HG7881CP 的从左到右2口控制左边的直流电机，4口控制右边的直流电机。如此通过电脑蓝牙连接HC06传输指令控制arduino和电机。</p>
 
 <h2 id="代码实现">代码实现</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;string.h&gt;</span><span style="color:#75715e">
