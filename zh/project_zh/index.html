@@ -7,7 +7,11 @@
 <meta name="author"
     content="Weiqi Feng ">
 <meta name="description"
-    content="" />
+    content=" 项目介绍 项目名称 可以利用图像识别自动走黑线的智能小车
+整体完成情况 利用OpenCV的进行图像识别，控制小车走黑线。通过摄像头捕捉图像，然后对捕捉到的图像进行分析处理。初始化时，需选择小车的头尾颜色（以此方式来一定程度上消除在不同亮度下对颜色的影响），选择视角变换的范围，选择终点，之后软件便能对地图进行透视变换、二值化、小车的捕捉以及对小车的控制通信，最后控制小车沿黑线行走。
+整体结构说明 项目原理及流程 由摄像头实时捕捉小车以及黑线的位置信息，图像传递给计算机后，利用OpenCV进行图像处理，作出相对应的控制指令，通过蓝牙通信将信息传达到小车的单片机上，由单片机控制小车的运行，最终实现计算机自主控制小车行走。
+项目所需材料 黑线地图：黑线地图为自制黑线地图。 小车：本实验对小车进行了改装，红蓝色的纸张可以方便对小车的识别。 摄像头：采用USB外置摄像头，与计算机相连提供实时画面。 蓝牙：采用HC-06蓝牙模块，实现电脑与单片机之间的通信。 软件部分：OpenCV for python 3.7，numpy，pyserial 硬件部分为：Energia。
+系统测试情况  " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://kc2019B30.github.io/zh/project_zh/" />
@@ -38,11 +42,15 @@
 <link rel="shortcut icon" href="https://kc2019B30.github.io/favicon.ico">
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="">
-<meta itemprop="description" content="">
+<meta itemprop="description" content=" 项目介绍 项目名称 可以利用图像识别自动走黑线的智能小车
+整体完成情况 利用OpenCV的进行图像识别，控制小车走黑线。通过摄像头捕捉图像，然后对捕捉到的图像进行分析处理。初始化时，需选择小车的头尾颜色（以此方式来一定程度上消除在不同亮度下对颜色的影响），选择视角变换的范围，选择终点，之后软件便能对地图进行透视变换、二值化、小车的捕捉以及对小车的控制通信，最后控制小车沿黑线行走。
+整体结构说明 项目原理及流程 由摄像头实时捕捉小车以及黑线的位置信息，图像传递给计算机后，利用OpenCV进行图像处理，作出相对应的控制指令，通过蓝牙通信将信息传达到小车的单片机上，由单片机控制小车的运行，最终实现计算机自主控制小车行走。
+项目所需材料 黑线地图：黑线地图为自制黑线地图。 小车：本实验对小车进行了改装，红蓝色的纸张可以方便对小车的识别。 摄像头：采用USB外置摄像头，与计算机相连提供实时画面。 蓝牙：采用HC-06蓝牙模块，实现电脑与单片机之间的通信。 软件部分：OpenCV for python 3.7，numpy，pyserial 硬件部分为：Energia。
+系统测试情况  ">
 
 
 
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="19">
 
 
 
@@ -51,7 +59,11 @@
 <meta name="twitter:image" content="https://kc2019B30.github.io"/>
 
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content=" 项目介绍 项目名称 可以利用图像识别自动走黑线的智能小车
+整体完成情况 利用OpenCV的进行图像识别，控制小车走黑线。通过摄像头捕捉图像，然后对捕捉到的图像进行分析处理。初始化时，需选择小车的头尾颜色（以此方式来一定程度上消除在不同亮度下对颜色的影响），选择视角变换的范围，选择终点，之后软件便能对地图进行透视变换、二值化、小车的捕捉以及对小车的控制通信，最后控制小车沿黑线行走。
+整体结构说明 项目原理及流程 由摄像头实时捕捉小车以及黑线的位置信息，图像传递给计算机后，利用OpenCV进行图像处理，作出相对应的控制指令，通过蓝牙通信将信息传达到小车的单片机上，由单片机控制小车的运行，最终实现计算机自主控制小车行走。
+项目所需材料 黑线地图：黑线地图为自制黑线地图。 小车：本实验对小车进行了改装，红蓝色的纸张可以方便对小车的识别。 摄像头：采用USB外置摄像头，与计算机相连提供实时画面。 蓝牙：采用HC-06蓝牙模块，实现电脑与单片机之间的通信。 软件部分：OpenCV for python 3.7，numpy，pyserial 硬件部分为：Energia。
+系统测试情况  "/>
 
 
 
@@ -83,7 +95,7 @@
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://kc2019B30.github.io/zh/project_zh/"></a></li><li><a href="https://kc2019B30.github.io/zh/member_zh/">成员介绍</a></li><li><a href="https://kc2019B30.github.io/zh/hardware_zh/">硬件介绍</a></li><li><a href="https://kc2019B30.github.io/zh/software_zh/">软件介绍</a></li><li><a href="https://kc2019B30.github.io/zh/summary_zh/">项目总结</a></li>
+    <ul class="menu__inner"><li><a href="https://kc2019B30.github.io/zh/project_zh/">项目介绍</a></li><li><a href="https://kc2019B30.github.io/zh/member_zh/">成员介绍</a></li><li><a href="https://kc2019B30.github.io/zh/hardware_zh/">硬件介绍</a></li><li><a href="https://kc2019B30.github.io/zh/software_zh/">软件介绍</a></li><li><a href="https://kc2019B30.github.io/zh/summary_zh/">项目总结</a></li>
     </ul>
 </nav>
 
@@ -122,6 +134,36 @@
 
             <div class="post-content">
                 
+
+<h1 id="项目介绍">项目介绍</h1>
+
+<h2 id="项目名称">项目名称</h2>
+
+<p>可以利用图像识别自动走黑线的智能小车</p>
+
+<h2 id="整体完成情况">整体完成情况</h2>
+
+<p>利用OpenCV的进行图像识别，控制小车走黑线。通过摄像头捕捉图像，然后对捕捉到的图像进行分析处理。初始化时，需选择小车的头尾颜色（以此方式来一定程度上消除在不同亮度下对颜色的影响），选择视角变换的范围，选择终点，之后软件便能对地图进行透视变换、二值化、小车的捕捉以及对小车的控制通信，最后控制小车沿黑线行走。</p>
+
+<h2 id="整体结构说明">整体结构说明</h2>
+
+<h3 id="项目原理及流程">项目原理及流程</h3>
+
+<p>由摄像头实时捕捉小车以及黑线的位置信息，图像传递给计算机后，利用OpenCV进行图像处理，作出相对应的控制指令，通过蓝牙通信将信息传达到小车的单片机上，由单片机控制小车的运行，最终实现计算机自主控制小车行走。</p>
+
+<h3 id="项目所需材料"><strong>项目所需材料</strong></h3>
+
+<p><strong>黑线地图</strong>：黑线地图为自制黑线地图。
+<strong>小车</strong>：本实验对小车进行了改装，红蓝色的纸张可以方便对小车的识别。
+<strong>摄像头</strong>：采用USB外置摄像头，与计算机相连提供实时画面。
+<strong>蓝牙</strong>：采用HC-06蓝牙模块，实现电脑与单片机之间的通信。
+<strong>软件部分</strong>：OpenCV for python 3.7，numpy，pyserial
+<strong>硬件部分为</strong>：Energia。</p>
+
+<h2 id="系统测试情况">系统测试情况</h2>
+
+<video controls="controls" controls="controls" src="http://202.120.59.221/kc201906/b30/video" width=640 height=480></video>
+
             </div>
         </article>
 

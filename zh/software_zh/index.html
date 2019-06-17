@@ -7,7 +7,10 @@
 <meta name="author"
     content="Weiqi Feng ">
 <meta name="description"
-    content=" 软件介绍 " />
+    content="软件介绍 本次我们选择的是小车走黑线题目，采取的是“实时扫描”算法，选择的语言为Python。Python的OpenCV库和numpy库配合使用，可以充分利用numpy的高效矩阵运算。
+小车和轨道的配置为：小车前方贴蓝色方块，后方贴红色方块，轨道为黑色。
+首先，对读入的帧进行不同颜色的二值化处理，得到红块、蓝块和跑道的二值化图像。处理过程中使用了HSV颜色通道，对不同颜色做阈值提取并且采用腐蚀化降噪。接着，调用numpy的平均值函数计算出红色、蓝色色块的平均位置（向量），并用两向量相减得到小车的前进方向向量。接扫描蓝色色块（小车车头）前方1.3倍小车车长的黑色路径，找出黑色路径的平均点的坐标。此坐标减去蓝色色块的坐标即得到应走的路径方向。接着使用叉乘算出小车前进方向和路径方向的夹角，并通过调整参数把夹角转换为左右轮的速度，通过蓝牙发送给小车，以实现直走、拐弯。
+本算法的特点是，不需要将轨道拍摄完全，可以让摄像头跟踪小车拍摄，实时扫描小车前方的路径即可。因此，我们的算法可以实现在小车沿黑线走时可以任意旋转赛道、平移赛道而不影响小车的走向。" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://kc2019B30.github.io/zh/software_zh/" />
@@ -38,11 +41,14 @@
 <link rel="shortcut icon" href="https://kc2019B30.github.io/favicon.ico">
 <meta name="theme-color" content="#252627">
 <meta itemprop="name" content="">
-<meta itemprop="description" content=" 软件介绍 ">
+<meta itemprop="description" content="软件介绍 本次我们选择的是小车走黑线题目，采取的是“实时扫描”算法，选择的语言为Python。Python的OpenCV库和numpy库配合使用，可以充分利用numpy的高效矩阵运算。
+小车和轨道的配置为：小车前方贴蓝色方块，后方贴红色方块，轨道为黑色。
+首先，对读入的帧进行不同颜色的二值化处理，得到红块、蓝块和跑道的二值化图像。处理过程中使用了HSV颜色通道，对不同颜色做阈值提取并且采用腐蚀化降噪。接着，调用numpy的平均值函数计算出红色、蓝色色块的平均位置（向量），并用两向量相减得到小车的前进方向向量。接扫描蓝色色块（小车车头）前方1.3倍小车车长的黑色路径，找出黑色路径的平均点的坐标。此坐标减去蓝色色块的坐标即得到应走的路径方向。接着使用叉乘算出小车前进方向和路径方向的夹角，并通过调整参数把夹角转换为左右轮的速度，通过蓝牙发送给小车，以实现直走、拐弯。
+本算法的特点是，不需要将轨道拍摄完全，可以让摄像头跟踪小车拍摄，实时扫描小车前方的路径即可。因此，我们的算法可以实现在小车沿黑线走时可以任意旋转赛道、平移赛道而不影响小车的走向。">
 
 
 
-<meta itemprop="wordCount" content="1">
+<meta itemprop="wordCount" content="5">
 
 
 
@@ -51,7 +57,10 @@
 <meta name="twitter:image" content="https://kc2019B30.github.io"/>
 
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content=" 软件介绍 "/>
+<meta name="twitter:description" content="软件介绍 本次我们选择的是小车走黑线题目，采取的是“实时扫描”算法，选择的语言为Python。Python的OpenCV库和numpy库配合使用，可以充分利用numpy的高效矩阵运算。
+小车和轨道的配置为：小车前方贴蓝色方块，后方贴红色方块，轨道为黑色。
+首先，对读入的帧进行不同颜色的二值化处理，得到红块、蓝块和跑道的二值化图像。处理过程中使用了HSV颜色通道，对不同颜色做阈值提取并且采用腐蚀化降噪。接着，调用numpy的平均值函数计算出红色、蓝色色块的平均位置（向量），并用两向量相减得到小车的前进方向向量。接扫描蓝色色块（小车车头）前方1.3倍小车车长的黑色路径，找出黑色路径的平均点的坐标。此坐标减去蓝色色块的坐标即得到应走的路径方向。接着使用叉乘算出小车前进方向和路径方向的夹角，并通过调整参数把夹角转换为左右轮的速度，通过蓝牙发送给小车，以实现直走、拐弯。
+本算法的特点是，不需要将轨道拍摄完全，可以让摄像头跟踪小车拍摄，实时扫描小车前方的路径即可。因此，我们的算法可以实现在小车沿黑线走时可以任意旋转赛道、平移赛道而不影响小车的走向。"/>
 
 
 
@@ -83,7 +92,7 @@
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://kc2019B30.github.io/zh/project_zh/"></a></li><li><a href="https://kc2019B30.github.io/zh/member_zh/">成员介绍</a></li><li><a href="https://kc2019B30.github.io/zh/hardware_zh/">硬件介绍</a></li><li><a href="https://kc2019B30.github.io/zh/software_zh/">软件介绍</a></li><li><a href="https://kc2019B30.github.io/zh/summary_zh/">项目总结</a></li>
+    <ul class="menu__inner"><li><a href="https://kc2019B30.github.io/zh/project_zh/">项目介绍</a></li><li><a href="https://kc2019B30.github.io/zh/member_zh/">成员介绍</a></li><li><a href="https://kc2019B30.github.io/zh/hardware_zh/">硬件介绍</a></li><li><a href="https://kc2019B30.github.io/zh/software_zh/">软件介绍</a></li><li><a href="https://kc2019B30.github.io/zh/summary_zh/">项目总结</a></li>
     </ul>
 </nav>
 
@@ -124,6 +133,16 @@
                 
 
 <h1 id="软件介绍">软件介绍</h1>
+
+<p>本次我们选择的是小车走黑线题目，采取的是“实时扫描”算法，选择的语言为Python。Python的OpenCV库和numpy库配合使用，可以充分利用numpy的高效矩阵运算。</p>
+
+<p>小车和轨道的配置为：小车前方贴蓝色方块，后方贴红色方块，轨道为黑色。</p>
+
+<p>首先，对读入的帧进行不同颜色的二值化处理，得到红块、蓝块和跑道的二值化图像。处理过程中使用了HSV颜色通道，对不同颜色做阈值提取并且采用腐蚀化降噪。接着，调用numpy的平均值函数计算出红色、蓝色色块的平均位置（向量），并用两向量相减得到小车的前进方向向量。接扫描蓝色色块（小车车头）前方1.3倍小车车长的黑色路径，找出黑色路径的平均点的坐标。此坐标减去蓝色色块的坐标即得到应走的路径方向。接着使用叉乘算出小车前进方向和路径方向的夹角，并通过调整参数把夹角转换为左右轮的速度，通过蓝牙发送给小车，以实现直走、拐弯。</p>
+
+<p><img src="https://kc2019B30.github.io/zh/software_zh.assets/image-20190617095731022.png" alt="image-20190617095731022" /></p>
+
+<p>本算法的特点是，不需要将轨道拍摄完全，可以让摄像头跟踪小车拍摄，实时扫描小车前方的路径即可。因此，我们的算法可以实现在小车沿黑线走时可以任意旋转赛道、平移赛道而不影响小车的走向。</p>
 
             </div>
         </article>

@@ -2,13 +2,83 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>欢迎来到我们的智能小车</title>
-    <link>https://kc2019B30.github.io/zh/index.html</link>
+    <link>https://kc2019B30.github.io/zh/</link>
     <description>Recent content on 欢迎来到我们的智能小车</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
 	<atom:link href="https://kc2019B30.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>https://kc2019B30.github.io/zh/hardware_zh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kc2019B30.github.io/zh/hardware_zh/</guid>
+      <description>硬件介绍 主要元件 Arduino Uno Arduino Uno 是一款基于ATmega328P的微控制器板。它有14个数字输入/输出引脚(其中6个可用作PWM输出)，6个模拟输入，16MHz晶振时钟，USB连接，电源插孔，ICSP接头和复位按钮。只需要通过USB数据线连接电脑就能供电、程序下载和数据通讯。
+在本次试验中, Arduino Uno开发板作为小车的核心控制部分, 是整个小车的中枢,承担着接收指令,处理指令,发送指令的核心作用.
+HC06 HC-05和HC-06是现在使用较多的两种蓝牙模块。HC-05蓝牙模块既能作为主机使用也能作为从机使用,而HC-06蓝牙模块只能作为从机使用,我们小组考虑蓝牙只需要作为从机进行使用,故使用HC-06模块.
+蓝牙模块在小车中负责与PC端进行无线通讯,负责接收PC端传出的控制指令并传输到Arduino 单片机上,其供电是通过单片机的引脚进行供电
+HG7881CP HG7881CP 是一个二路驱动模块, 分别驱动小车的左右两轮,能够实现正反转,其有6个引脚.分别和四根信号线与一根电源线一根地线相连.
+在本次试验中由于小车不需要倒退,并且为了方便调试,只选用了两根信号线,空置了两根信号线.并且为了电流过大造成单片机宕机,电源线和地线直接连接电池.
+直流减速电机 直流减速电机，是在普通直流电机的基础上，加上配套齿轮减速箱。齿轮减速箱的作用是，提供较低的转速，较大的力矩。同时，齿轮箱不同的减速比可以提供不同的转速和力矩。
+在本次试验中,为了追求小车的稳定性,使用的是直流减速电机而不是普通的直流电机.
+电机没有使用编码器,只把AB相与驱动模块相连接.
+主要电路图 主要原理 我们利用一块HC06连接在arduino板子的RX，TX口上作为蓝牙信号传输的端口，HC06与电脑适配传输信息，在arduino板子上编写程序利用Serial库接受蓝牙串口信号。在此arduino中我们定义了pin脚4,9输出控制信号，利用HG7881CP 和外接电源来控制电机，其中HG7881CP 的从左到右2口控制左边的直流电机，4口控制右边的直流电机。如此通过电脑蓝牙连接HC06传输指令控制arduino和电机。
+代码实现 #include &amp;lt;string.h&amp;gt;/* Define used pin */ int pin3 = 3; int pin4 = 6; int pin9 = 9; int pin10 = 4; /* str stores message from PC */ char str[7]; void setup() { /* Begin the serial */ Serial.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kc2019B30.github.io/zh/member_zh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kc2019B30.github.io/zh/member_zh/</guid>
+      <description>成员介绍 冯伟琪 [照片占坑]
+[一段文字描述]
+黄弘 [照片占坑]
+[一段文字描述]
+李熠阳 [照片占坑]
+[一段文字描述]
+严铖 [照片占坑]
+[一段文字描述]</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kc2019B30.github.io/zh/project_zh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kc2019B30.github.io/zh/project_zh/</guid>
+      <description> 项目介绍 项目名称 可以利用图像识别自动走黑线的智能小车
+整体完成情况 利用OpenCV的进行图像识别，控制小车走黑线。通过摄像头捕捉图像，然后对捕捉到的图像进行分析处理。初始化时，需选择小车的头尾颜色（以此方式来一定程度上消除在不同亮度下对颜色的影响），选择视角变换的范围，选择终点，之后软件便能对地图进行透视变换、二值化、小车的捕捉以及对小车的控制通信，最后控制小车沿黑线行走。
+整体结构说明 项目原理及流程 由摄像头实时捕捉小车以及黑线的位置信息，图像传递给计算机后，利用OpenCV进行图像处理，作出相对应的控制指令，通过蓝牙通信将信息传达到小车的单片机上，由单片机控制小车的运行，最终实现计算机自主控制小车行走。
+项目所需材料 黑线地图：黑线地图为自制黑线地图。 小车：本实验对小车进行了改装，红蓝色的纸张可以方便对小车的识别。 摄像头：采用USB外置摄像头，与计算机相连提供实时画面。 蓝牙：采用HC-06蓝牙模块，实现电脑与单片机之间的通信。 软件部分：OpenCV for python 3.7，numpy，pyserial 硬件部分为：Energia。
+系统测试情况  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kc2019B30.github.io/zh/software_zh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kc2019B30.github.io/zh/software_zh/</guid>
+      <description>软件介绍 本次我们选择的是小车走黑线题目，采取的是“实时扫描”算法，选择的语言为Python。Python的OpenCV库和numpy库配合使用，可以充分利用numpy的高效矩阵运算。
+小车和轨道的配置为：小车前方贴蓝色方块，后方贴红色方块，轨道为黑色。
+首先，对读入的帧进行不同颜色的二值化处理，得到红块、蓝块和跑道的二值化图像。处理过程中使用了HSV颜色通道，对不同颜色做阈值提取并且采用腐蚀化降噪。接着，调用numpy的平均值函数计算出红色、蓝色色块的平均位置（向量），并用两向量相减得到小车的前进方向向量。接扫描蓝色色块（小车车头）前方1.3倍小车车长的黑色路径，找出黑色路径的平均点的坐标。此坐标减去蓝色色块的坐标即得到应走的路径方向。接着使用叉乘算出小车前进方向和路径方向的夹角，并通过调整参数把夹角转换为左右轮的速度，通过蓝牙发送给小车，以实现直走、拐弯。
+本算法的特点是，不需要将轨道拍摄完全，可以让摄像头跟踪小车拍摄，实时扫描小车前方的路径即可。因此，我们的算法可以实现在小车沿黑线走时可以任意旋转赛道、平移赛道而不影响小车的走向。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kc2019B30.github.io/zh/summary_zh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kc2019B30.github.io/zh/summary_zh/</guid>
+      <description>项目总结 成果  我们的小车可以进行沿黑线全自动前行，其中无需其他任何操作。 在小车前行过程，移动轨道或者旋转摄像头不会对小车产生影响 采用Python进行开发，代码精简易懂具有参考价值 自制Arduino小车具有更强的可定制化性能  不足  程序参数的调整受小车电量的影响和光强的影响较大 小车的电机存在一定问题，需要通过调整参数才能够直行  自我评价  我们通过一学期的时间最终打造了一个自制的智能小车， 最终小车可以识别黑线，自动前进。 我们一起学习了Opencv库的使用，懂得了图像处理的基本知识。 我们学习了Arduino单片机编程的有关知识，进行了单片机编程。 我们学习了有关蓝牙串口通讯的有关知识！ 这是收获满满的一学期！  资源提供 [Python源代码]()
+[单片机源代码]()</description>
+    </item>
     
   </channel>
 </rss>
